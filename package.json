@@ -1,0 +1,28 @@
+{
+  "name": "green2-thuoc-thuy-san-e2e",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kịch bản Playwright cho các case 'Có thể Auto' của [Web] Danh mục Thuốc thuỷ sản (GUI / FUNCT / VALIDATE)",
+  "scripts": {
+    "seed": "playwright test --project=seed",
+    "test": "playwright test --project=chrome",
+    "test:headed": "playwright test --project=chrome --headed",
+    "test:ui": "playwright test --ui",
+    "test:gui": "playwright test --project=chrome tests/gui",
+    "test:funct": "playwright test --project=chrome tests/funct",
+    "test:validate": "playwright test --project=chrome tests/validate",
+    "report": "playwright show-report reports/html",
+    "codegen": "playwright codegen",
+    "typecheck": "tsc --noEmit",
+    "tc:sync": "node scripts/excel-to-json.mjs",
+    "tc:coverage": "node scripts/check-coverage.mjs",
+    "results:excel": "node scripts/write-results.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.47.2",
+    "@types/node": "20.16.5",
+    "dotenv": "16.4.5",
+    "exceljs": "4.4.0",
+    "typescript": "5.5.4"
+  }
+}
